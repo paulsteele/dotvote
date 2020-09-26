@@ -16,5 +16,8 @@
   <ItemGroup>
     <ProjectReference Include="..\Shared\dotvote.Shared.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels" />
+  </ItemGroup>
 
 </Project>

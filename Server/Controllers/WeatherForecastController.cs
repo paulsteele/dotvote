@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using dotvote.Shared;
+using dotvote.Shared.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 

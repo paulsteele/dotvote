@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace dotvote.Shared
+namespace dotvote.Shared.Models
 {
 	public class WeatherForecast
 	{
