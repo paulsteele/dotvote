@@ -1,8 +1,8 @@
+using System.Net.Http;
 using System.Threading.Tasks;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace dotvote.Client
 {
@@ -21,6 +21,7 @@ namespace dotvote.Client
 		private static void Register(ContainerBuilder builder)
 		{
 			// add any registrations here
+			builder.RegisterType<HttpClient>().As<HttpClient>();
 		}
 	}
 }

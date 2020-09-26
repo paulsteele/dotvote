@@ -1,3 +1,4 @@
+using System;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using dotvote.Server.Controllers;
@@ -66,6 +67,7 @@ namespace dotvote.Server
 			// won't get called. Don't create a ContainerBuilder
 			// for Autofac here, and don't call builder.Populate() - that
 			// happens in the AutofacServiceProviderFactory for you.
+			services.AddControllers();
 		}
 
 		// ConfigureContainer is where you can register things directly
@@ -77,7 +79,6 @@ namespace dotvote.Server
 			// Register your own things directly with Autofac here. Don't
 			// call builder.Populate(), that happens in AutofacServiceProviderFactory
 			// for you.
-			builder.RegisterType<Logger<WeatherForecastController>>().As<ILogger<WeatherForecastController>>();
 		}
 	}
 }
