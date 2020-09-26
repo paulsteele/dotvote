@@ -1,4 +1,6 @@
 using System.Threading.Tasks;
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -11,9 +13,14 @@ namespace dotvote.Client
 			var builder = WebAssemblyHostBuilder.CreateDefault(args);
 			builder.RootComponents.Add<App>("app");
 
-			builder.Services.AddBaseAddressHttpClient();
+			builder.ConfigureContainer(new AutofacServiceProviderFactory(Register));
 
 			await builder.Build().RunAsync();
+		}
+
+		private static void Register(ContainerBuilder builder)
+		{
+			// add any registrations here
 		}
 	}
 }
