@@ -56,6 +56,7 @@ app {
 	white-space: nowrap;
 	color: #f1fafd;
 	font-size: xx-large;
+	text-decoration: none;
 }
 
 .main .top-row a:first-child {
@@ -122,6 +123,14 @@ app {
 	background-color: rgba(255, 255, 255, 0.1);
 }
 
+.blazor-dropdown {
+	font-size: x-large;
+	color: #f1fafd;
+	padding: 0;
+	margin-top: -6px;
+	margin-left: auto;
+}
+
 .valid.modified:not([type=checkbox]) {
 	outline: 1px solid #26b050;
 }
@@ -154,17 +163,6 @@ app {
 }
 
 @media (max-width: 767.98px) {
-	.main .top-row:not(.auth) {
-		display: none;
-	}
-
-	.main .top-row.auth {
-		justify-content: space-between;
-	}
-
-	.main .top-row a, .main .top-row .btn-link {
-		margin-left: 0;
-	}
 }
 
 @media (min-width: 768px) {

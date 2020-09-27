@@ -19,5 +19,8 @@
   <ItemGroup>
     <Folder Include="ViewModels" />
   </ItemGroup>
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Layouts\MainLayout.razor" />
+  </ItemGroup>
 
 </Project>
