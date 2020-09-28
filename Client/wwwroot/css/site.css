@@ -131,6 +131,18 @@ app {
 	margin-left: auto;
 }
 
+.blazor-dropdown-parent {
+	position: relative;
+}
+
+.blazor-dropdown-container {
+	position: absolute;
+}
+
+.blazor-dropdown:hover {
+	color: #dae4e5;
+}
+
 .valid.modified:not([type=checkbox]) {
 	outline: 1px solid #26b050;
 }

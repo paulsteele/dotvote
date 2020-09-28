@@ -1,5 +1,22 @@
-<button class="oi oi-menu btn blazor-dropdown"></button>
+<button class="oi oi-menu btn blazor-dropdown" @onclick="ToggleDropdown"></button>
+@if (Open)
+{
+	<div class="blazor-dropdown-parent">
+		<div class="blazor-dropdown-container">
+		@foreach ((string name, string route) item in Items)
+		{
+			<a href="@item.route">@item.name</a>
+		}
+		</div>
+	</div>
+}
 
 @code {
-	[Parameter] public IList<(string, string)> Items { get; set; } 
+	[Parameter] public IList<(string, string)> Items { get; set; }
+	private bool Open { get; set; }
+	
+	private void ToggleDropdown(MouseEventArgs e)
+	{
+		Open = !Open;
+	}
 }

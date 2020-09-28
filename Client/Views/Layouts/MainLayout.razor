@@ -1,9 +1,13 @@
 @inherits LayoutComponentBase
 
+@{
+	var options = new List<(string, string)> {("About", "/about")};
+}
+
 <div class="main">
 	<div class="top-row px-4">
 		<a href="" >dot-voting</a>
-		<Dropdown/>
+		<Dropdown Items="@options"/>
 	</div>
 	<div class="content px-4">
 		@Body
